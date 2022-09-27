@@ -1,0 +1,164 @@
+<%- include('../partials/header') -%>
+
+<section class="bg-white dark:bg-gray-900">
+  <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+      <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+          <h2 data-name="<%= communities._id %>" class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Welcome to the <%= communities.communityName %> community!</h2>
+          <p class="mb-4"><%= communities.description %> </p>
+          <p>Create, and vote on community initiatives while tracking all votes in real time!</p>
+          <div class="grid grid-cols-2 justify-evenly gap-8 p-6">
+            <a href="#voteChartSection" class="inline-flex justify-center items-center p-5 text-base font-medium text-gray-500 rounded-lg hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">                                            
+              <span class="w-full">Vote on community initiatives</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path fill-rule="evenodd" d="M12 3.75a.75.75 0 01.75.75v13.19l5.47-5.47a.75.75 0 111.06 1.06l-6.75 6.75a.75.75 0 01-1.06 0l-6.75-6.75a.75.75 0 111.06-1.06l5.47 5.47V4.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
+              </svg>                           
+            </a> 
+            <a href="#createInitiativeSection" class="inline-flex justify-center items-center p-5 text-base font-medium text-gray-500 rounded-lg hover:text-gray-900 dark:text-gray-400 dark:hover:text-white">                                            
+              <span class="w-full">Create community initiatives</span>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path fill-rule="evenodd" d="M12 3.75a.75.75 0 01.75.75v13.19l5.47-5.47a.75.75 0 111.06 1.06l-6.75 6.75a.75.75 0 01-1.06 0l-6.75-6.75a.75.75 0 111.06-1.06l5.47 5.47V4.5a.75.75 0 01.75-.75z" clip-rule="evenodd" />
+              </svg>                           
+            </a> 
+          </div>
+      </div>
+      <div class="grid grid-cols-2 gap-4 mt-8">
+          <img class="w-full rounded-lg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAAE3CAYAAACzYU3CAAAAAXNSR0IArs4c6QAADPJJREFUeF7t2gmPFWUThuFmcQEEQRBcQdl3Ef//PzBxQQkoalR2cGEVAoipTnpyvsOMfLMklSqvTow4zDlVdT91z9t9xnWff/7588GFAAIpBNYRMIW7ogiMBAhoERBIJEDARPhKI0BAO4BAIgECJsJXGgEC2gEEEgkQMBG+0ggQ0A4gkEiAgInwlUaAgHYAgUQCBEyErzQCBLQDCCQSIGAifKURIKAdQCCRAAET4SuNAAHtAAKJBAiYCF9pBAhoBxBIJEDARPhKI0BAO4BAIgECJsJXGgEC2gEEEgkQMBG+0ggQ0A4gkEiAgInwlUaAgHYAgUQCBEyErzQCBLQDCCQSIGAifKURIKAdQCCRAAET4SuNAAHtAAKJBAiYCF9pBAhoBxBIJEDARPhKI0BAO4BAIgECJsJXGgEC2gEEEgkQMBG+0ggQ0A4gkEiAgInwlUaAgHYAgUQCBEyErzQCBLQDCCQSIGAifKURIKAdQCCRAAET4SuNAAHtAAKJBAiYCF9pBAhoBxBIJEDARPhKI0BAO4BAIgECJsJXGgEC2gEEEgkQMBG+0ggQ0A4gkEiAgInwlUaAgHYAgUQCBEyErzQCBLQDCCQSIGAifKURIKAdQCCRAAET4SuNAAHtAAKJBAiYCF9pBAhoBxBIJEDARPhKI0BAO4BAIgECJsJXGgEC2gEEEgkQMBG+0ggQ0A4gkEiAgInwlUaAgHYAgUQCBEyErzQCBLQDCCQSIGAifKURIKAdQCCRAAET4SuNAAHtAAKJBAiYCF9pBAhoBxBIJEDARPhKI0BAO4BAIgECJsJXGgEC2gEEEgkQMBG+0ggQ0A4gkEiAgInwlUaAgHYAgUQCBEyErzQCBLQDCCQSIGAifKURIKAdQCCRAAET4SuNAAHtAAKJBAiYCF9pBAhoBxBIJEDARPhKI0BAO4BAIgECJsJXGgEC2gEEEgkQMBG+0ggQ0A4gkEiAgInwlUaAgHYAgUQCBEyErzQCBLQDCCQSIGAifKURIKAdQCCRAAET4SuNAAHtAAKJBAiYCF9pBAhoBxBIJEDARPhKI0BAO4BAIgECJsJXGgEC2gEEEgkQMBG+0ggQ0A4gkEiAgInwlUaAgHYAgUQCBEyErzQCBLQDCCQSIGAifKURIKAdQCCRAAET4SuNAAHtAAKJBAiYCF9pBAhoBxBIJEDARPhKI0BAO4BAIgECJsJXGgEC2gEEEgkQMBG+0ggQ0A4gkEiAgInwlUaAgHYAgUQCBEyErzQCBLQDCCQSIGAifKURIKAdQCCRAAET4SuNAAHtAAKJBAiYCF9pBAhoBxBIJEDARPhKI0BAO4BAIgECrgL+K6+8MnzwwQfDli1bhnXr1g2PHz8efv755/Hf07V169Zhz549w+bNm4e///57ePDgwfg98efFro8++mh48803h2+++WZ49uzZKrp78aXvv//+sG3btmHDhg3DnTt3hlu3bg2PHj1aso+NGzcOly5dWvTvjx07Nr7H1atX17TH/9qbEXCFiYd8J06cGJd5/vr222/HxY5lP3To0PjXz58/HyWN6+nTp8NXX331wuu2b98+HDhwYPz6119/PTx58mSF3b34ssOHDw/xw2D++uWXX0YRZ6/XX399nG2pPt9+++1h7969w927d4fvv/9+zXr8L74RAVeY+r59+4Zdu3YN9+7dG7777rshTouDBw+Op2GcchcuXBhOnjw5vPbaa8Ply5eHGzduDJs2bRqOHDkyShsnx7Vr1xaqx9dOnz49rF+/fs0FfPXVV4dTp06NQsUPh/h3nNxxMofkIXtcIVb8E30u9oMipIsfKjFTXARc4fLMvIyAK2R4/PjxcVG//PLLhVvF+O/4etw6xtfPnj073mrGn6crbgPfeeedBXGnrx89enSUN4SI03WpEzBOsf379481QqbpZI0TK+S9ePHi/9wCx/uHaCHcvPSfffbZ2N8XX3wxthE/QEKwuOK0nj8B4wdE/KCZTnICrnB5CLh6cHGrGKdWnH7TNd1ChkTnzp0b4jkpTshff/114XtCnh07dgx//vnn8MMPP4xf37179/Dhhx8Ov/3223i6vPHGG/96CxqyxW3i77//Pvz000/jbWvUnk7j+eni+TPEivefbmvjOTOEm07r+deEnEvdgk631gRc/R45AVfPcHyHECdOsTgh4pkqnq3mr1j6kCVOkHh2igWO28O4VY1lj1MvblFfJuB0SxnvH3KHvHGSxXPlUh/uTL1E/ThF44dHnJ5xYoaEBFyjRVjm2xBwmcAW+/Z33313iH9CrMVOlLg1/Pjjj8dTKq6bN28unIrTc+L58+eHv/766/8SMN4j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" alt="placeholder image">
+          <img class="mt-4 w-full lg:mt-10 rounded-lg" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAAE3CAYAAACzYU3CAAAAAXNSR0IArs4c6QAADPJJREFUeF7t2gmPFWUThuFmcQEEQRBcQdl3Ef//PzBxQQkoalR2cGEVAoipTnpyvsOMfLMklSqvTow4zDlVdT91z9t9xnWff/7588GFAAIpBNYRMIW7ogiMBAhoERBIJEDARPhKI0BAO4BAIgECJsJXGgEC2gEEEgkQMBG+0ggQ0A4gkEiAgInwlUaAgHYAgUQCBEyErzQCBLQDCCQSIGAifKURIKAdQCCRAAET4SuNAAHtAAKJBAiYCF9pBAhoBxBIJEDARPhKI0BAO4BAIgECJsJXGgEC2gEEEgkQMBG+0ggQ0A4gkEiAgInwlUaAgHYAgUQCBEyErzQCBLQDCCQSIGAifKURIKAdQCCRAAET4SuNAAHtAAKJBAiYCF9pBAhoBxBIJEDARPhKI0BAO4BAIgECJsJXGgEC2gEEEgkQMBG+0ggQ0A4gkEiAgInwlUaAgHYAgUQCBEyErzQCBLQDCCQSIGAifKURIKAdQCCRAAET4SuNAAHtAAKJBAiYCF9pBAhoBxBIJEDARPhKI0BAO4BAIgECJsJXGgEC2gEEEgkQMBG+0ggQ0A4gkEiAgInwlUaAgHYAgUQCBEyErzQCBLQDCCQSIGAifKURIKAdQCCRAAET4SuNAAHtAAKJBAiYCF9pBAhoBxBIJEDARPhKI0BAO4BAIgECJsJXGgEC2gEEEgkQMBG+0ggQ0A4gkEiAgInwlUaAgHYAgUQCBEyErzQCBLQDCCQSIGAifKURIKAdQCCRAAET4SuNAAHtAAKJBAiYCF9pBAhoBxBIJEDARPhKI0BAO4BAIgECJsJXGgEC2gEEEgkQMBG+0ggQ0A4gkEiAgInwlUaAgHYAgUQCBEyErzQCBLQDCCQSIGAifKURIKAdQCCRAAET4SuNAAHtAAKJBAiYCF9pBAhoBxBIJEDARPhKI0BAO4BAIgECJsJXGgEC2gEEEgkQMBG+0ggQ0A4gkEiAgInwlUaAgHYAgUQCBEyErzQCBLQDCCQSIGAifKURIKAdQCCRAAET4SuNAAHtAAKJBAiYCF9pBAhoBxBIJEDARPhKI0BAO4BAIgECJsJXGgEC2gEEEgkQMBG+0ggQ0A4gkEiAgInwlUaAgHYAgUQCBEyErzQCBLQDCCQSIGAifKURIKAdQCCRAAET4SuNAAHtAAKJBAiYCF9pBAhoBxBIJEDARPhKI0BAO4BAIgECJsJXGgEC2gEEEgkQMBG+0ggQ0A4gkEiAgInwlUaAgHYAgUQCBEyErzQCBLQDCCQSIGAifKURIKAdQCCRAAET4SuNAAHtAAKJBAiYCF9pBAhoBxBIJEDARPhKI0BAO4BAIgECrgL+K6+8MnzwwQfDli1bhnXr1g2PHz8efv755/Hf07V169Zhz549w+bNm4e///57ePDgwfg98efFro8++mh48803h2+++WZ49uzZKrp78aXvv//+sG3btmHDhg3DnTt3hlu3bg2PHj1aso+NGzcOly5dWvTvjx07Nr7H1atX17TH/9qbEXCFiYd8J06cGJd5/vr222/HxY5lP3To0PjXz58/HyWN6+nTp8NXX331wuu2b98+HDhwYPz6119/PTx58mSF3b34ssOHDw/xw2D++uWXX0YRZ6/XX399nG2pPt9+++1h7969w927d4fvv/9+zXr8L74RAVeY+r59+4Zdu3YN9+7dG7777rshTouDBw+Op2GcchcuXBhOnjw5vPbaa8Ply5eHGzduDJs2bRqOHDkyShsnx7Vr1xaqx9dOnz49rF+/fs0FfPXVV4dTp06NQsUPh/h3nNxxMofkIXtcIVb8E30u9oMipIsfKjFTXARc4fLMvIyAK2R4/PjxcVG//PLLhVvF+O/4etw6xtfPnj073mrGn6crbgPfeeedBXGnrx89enSUN4SI03WpEzBOsf379481QqbpZI0TK+S9ePHi/9wCx/uHaCHcvPSfffbZ2N8XX3wxthE/QEKwuOK0nj8B4wdE/KCZTnICrnB5CLh6cHGrGKdWnH7TNd1ChkTnzp0b4jkpTshff/114XtCnh07dgx//vnn8MMPP4xf37179/Dhhx8Ov/3223i6vPHGG/96CxqyxW3i77//Pvz000/jbWvUnk7j+eni+TPEivefbmvjOTOEm07r+deEnEvdgk631gRc/R45AVfPcHyHECdOsTgh4pkqnq3mr1j6kCVOkHh2igWO28O4VY1lj1MvblFfJuB0SxnvH3KHvHGSxXPlUh/uTL1E/ThF44dHnJ5xYoaEBFyjRVjm2xBwmcAW+/Z33313iH9CrMVOlLg1/Pjjj8dTKq6bN28unIrTc+L58+eHv/766/8SMN4j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" alt="placeholder image">
+      </div>
+  </div>
+</section>
+<section id="voteChartSection" class="bg-white dark:bg-gray-900">
+  <h2 class="pt-12 mb-6 text-4xl text-center tracking-tight font-extrabold text-gray-900 dark:text-white">Vote on Community Initiatives</h2>
+  <div class="grid grid-col-2 gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:block sm:py-16 lg:px-6">
+    <div class="chartContainer">
+        <canvas id="voteChart" width="1000" height="400"></canvas>
+    </div>
+    <div class="mt-4 md:mt-0">
+      <div class="overflow-auto max-h-96 relative shadow-md sm:rounded-lg">
+        <table id="vote-wrapper" class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr>
+                    <th scope="col" class="py-3 px-3">
+                        Title
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Description
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Vote
+                    </th>
+                    <th scope="col" class="py-3 px-6">
+                        Delete
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+              <% seeds.forEach(element => { %>
+                <% if (element.communityId == communities._id) { %> 
+                    <tr class="bg-white border-b  dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                      <td class="max-w-xs font-semibold py-4 pl-2">
+                        <p class="truncate">
+                        <%= element.title %>
+                        </p>
+                      </td>
+                      <td class="max-w-xs py-4 px-6">
+                        <div>
+                          <p class="truncate">
+                            <%= element.about %>
+                          </p>
+                        </div>
+                        <div>
+                          <p class="truncate">
+                            Created by: <%= element.createdBy %>
+                          </p>
+                        </div>
+                        <div>
+                          <%= formatDate(element.createdAt, 'llll') %>
+                        </div>
+                      </td>
+                      <td class="max-w-xs py-4 px-6">
+                        <form id="vote-form" data-id="<%= element._id %>" action="/seeds/likeSeed/<%= element._id %>?_method=PATCH" method="post">
+                          <button type="submit">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                            </svg>
+                          </button>
+                        </form>
+                      </td>
+                      <td class="max-w-xs py-4 px-6">
+                        <% if (element.user == user.id) { %>
+                        <form id="delete-form" data-type="<%= element._id %>" action="/seeds/deleteSeed/<%= element._id %>?_method=DELETE" method="post">
+                          <button type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                            </svg>                            
+                          </button>
+                        </form>
+                        <% } %>
+                      </td>
+                  </tr>
+                <% } %>
+              <% }) %> 
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="createInitiativeSection" class="bg-white dark:bg-gray-900">
+  <div class="grid grid-col-2 gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
+    <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">Create a community initiative</h2>
+        <p class="mb-4">Create a community initative that you'd like to see materialize!</p>
+        <p>Other users can vote on your initiatives too! Submit your ideas and see what other people think of your idea.</p>
+        <div class="grid grid-cols-1 grid-rows-3 grid-flow-col justify-start gap-8 pt-12 pl-24">
+          <div class="flex">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+              <path fill-rule="evenodd" d="M7.5 6a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM3.751 20.105a8.25 8.25 0 0116.498 0 .75.75 0 01-.437.695A18.683 18.683 0 0112 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 01-.437-.695z" clip-rule="evenodd" />
+            </svg>            
+            <span class="pl-3 font-semibold w-full">
+              Describe your initiative
+            </span>
+          </div>
+          <div class="flex">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+              <path d="M6.25 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM3.25 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM19.75 7.5a.75.75 0 00-1.5 0v2.25H16a.75.75 0 000 1.5h2.25v2.25a.75.75 0 001.5 0v-2.25H22a.75.75 0 000-1.5h-2.25V7.5z" />
+            </svg>            
+            <span class="pl-3 font-semibold w-full">
+            Submit it for all to see
+          </span>
+          </div>
+          <div class="flex">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+              <path fill-rule="evenodd" d="M8.25 6.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM15.75 9.75a3 3 0 116 0 3 3 0 01-6 0zM2.25 9.75a3 3 0 116 0 3 3 0 01-6 0zM6.31 15.117A6.745 6.745 0 0112 12a6.745 6.745 0 016.709 7.498.75.75 0 01-.372.568A12.696 12.696 0 0112 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 01-.372-.568 6.787 6.787 0 011.019-4.38z" clip-rule="evenodd" />
+              <path d="M5.082 14.254a8.287 8.287 0 00-1.308 5.135 9.687 9.687 0 01-1.764-.44l-.115-.04a.563.563 0 01-.373-.487l-.01-.121a3.75 3.75 0 013.57-4.047zM20.226 19.389a8.287 8.287 0 00-1.308-5.135 3.75 3.75 0 013.57 4.047l-.01.121a.563.563 0 01-.373.486l-.115.04c-.567.2-1.156.349-1.764.441z" />
+            </svg>            
+            <span class="pl-3 font-semibold w-full">
+            Watch it grow!
+          </span>
+          </div>
+        </div>
+    </div>
+    <div class="grid grid-cols-1 gap-4 mt-8">
+      <form action="/post/createSeed" method="POST">
+        <div class="grid gap-6 mb-6 md:grid-cols-1">
+            <div>
+                <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Title</label>
+                <input type="text" name="title" id="title" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" placeholder="Title your community initiative" required>
+            </div>
+            <div>
+              <label for="about" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Description</label>
+              <textarea id="about" name="about" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-green-500 focus:border-green-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500" placeholder="Tell us about your idea and how you think it might help your community."></textarea>
+              <input type="hidden" name="communityName" value="<%= communities.communityName %>">
+              <input type="hidden" name="communityId" value="<%= communities.id %>">
+            </div>
+          </div>
+        <button type="submit" class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">Submit</button>
+      </form> 
+    </div>
+  </div>
+</section>
+<script src="/js/buildChart.js"></script>
+<%- include('../partials/footer') -%>
+
+
