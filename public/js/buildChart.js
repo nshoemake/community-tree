@@ -85,6 +85,8 @@ async function buildChart() {
             type: 'bar',
             data: data,
             options: {
+                maintainAspectRatio: false,
+                responsive: false,
                 indexAxis: 'y',
                 plugins: {
                     legend: {
@@ -136,16 +138,6 @@ async function buildChart() {
                 })
             }
             populateNewSeedsChart()
-            // labels[0] = data.newSeedsChart[0].title
-            // labels[1] = data.newSeedsChart[1].title
-            // labels[2] = data.newSeedsChart[2].title
-            // labels[3] = data.newSeedsChart[3].title
-            // labels[4] = data.newSeedsChart[4].title
-            // dataPoints[0] = data.newSeedsChart[0].likes
-            // dataPoints[1] = data.newSeedsChart[1].likes
-            // dataPoints[2] = data.newSeedsChart[2].likes
-            // dataPoints[3] = data.newSeedsChart[3].likes
-            // dataPoints[4] = data.newSeedsChart[4].likes
             voteChart.update()
         })
     } catch (error) {

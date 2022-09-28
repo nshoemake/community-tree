@@ -1,6 +1,7 @@
 const Community = require("../models/Community");
 const User = require("../models/User");
 const Seed = require("../models/Seed");
+const { formatDate } = require("../helpers/ejs");
 
 module.exports = {
   getCommunities: async (req, res) => {
@@ -41,7 +42,9 @@ module.exports = {
       res.render("communities/community.ejs", { 
         communities: communities,
         seeds: seeds,
-        user: req.user });
+        user: req.user,
+        formatDate: formatDate,
+      });
     } catch (err) {
       console.log(err);
     }

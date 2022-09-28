@@ -29,25 +29,25 @@
 </section>
 <section id="voteChartSection" class="bg-white dark:bg-gray-900">
   <h2 class="pt-12 mb-6 text-4xl text-center tracking-tight font-extrabold text-gray-900 dark:text-white">Vote on Community Initiatives</h2>
-  <div class="grid grid-col-2 gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:block sm:py-16 lg:px-6">
-    <div class="chartContainer">
+  <div class="py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-1 sm:block sm:py-16 lg:px-6">
+    <div class="flex flex-wrap justify-center">
         <canvas id="voteChart" width="1000" height="400"></canvas>
     </div>
     <div class="mt-4 md:mt-0">
       <div class="overflow-auto max-h-96 relative shadow-md sm:rounded-lg">
-        <table id="vote-wrapper" class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+        <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
-                    <th scope="col" class="py-3 px-3">
+                    <th scope="col" class="py-3 pl-2">
                         Title
                     </th>
-                    <th scope="col" class="py-3 px-6">
+                    <th scope="col" class="py-3 pl-3">
                         Description
                     </th>
-                    <th scope="col" class="py-3 px-6">
+                    <th scope="col" class="text-center py-3 pl-3">
                         Vote
                     </th>
-                    <th scope="col" class="py-3 px-6">
+                    <th scope="col" class="text-center py-3 px-3">
                         Delete
                     </th>
                 </tr>
@@ -55,13 +55,13 @@
             <tbody>
               <% seeds.forEach(element => { %>
                 <% if (element.communityId == communities._id) { %> 
-                    <tr class="bg-white border-b  dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                       <td class="max-w-xs font-semibold py-4 pl-2">
                         <p class="truncate">
                         <%= element.title %>
                         </p>
                       </td>
-                      <td class="max-w-xs py-4 px-6">
+                      <td class="max-w-sm py-4 pl-3">
                         <div>
                           <p class="truncate">
                             <%= element.about %>
@@ -76,8 +76,8 @@
                           <%= formatDate(element.createdAt, 'llll') %>
                         </div>
                       </td>
-                      <td class="max-w-xs py-4 px-6">
-                        <form id="vote-form" data-id="<%= element._id %>" action="/seeds/likeSeed/<%= element._id %>?_method=PATCH" method="post">
+                      <td class="py-4 pl-3">
+                        <form id="vote-form" class="text-center" data-id="<%= element._id %>" action="/seeds/likeSeed/<%= element._id %>?_method=PATCH" method="post">
                           <button type="submit">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
@@ -85,9 +85,9 @@
                           </button>
                         </form>
                       </td>
-                      <td class="max-w-xs py-4 px-6">
+                      <td class="py-4 pl-3">
                         <% if (element.user == user.id) { %>
-                        <form id="delete-form" data-type="<%= element._id %>" action="/seeds/deleteSeed/<%= element._id %>?_method=DELETE" method="post">
+                        <form id="delete-form" class="text-center" data-type="<%= element._id %>" action="/seeds/deleteSeed/<%= element._id %>?_method=DELETE" method="post">
                           <button type="submit">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
@@ -140,7 +140,7 @@
         </div>
     </div>
     <div class="grid grid-cols-1 gap-4 mt-8">
-      <form action="/post/createSeed" method="POST">
+      <form action="/seeds/createSeed" method="POST">
         <div class="grid gap-6 mb-6 md:grid-cols-1">
             <div>
                 <label for="title" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300">Title</label>
