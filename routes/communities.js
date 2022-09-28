@@ -7,6 +7,7 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 // Main routes
 router.get("/", ensureAuth, communitiesController.getCommunities);
 router.get("/:id", ensureAuth, communitiesController.getCommunity);
+router.get("/:id/api", ensureAuth, communitiesController.getSeeds);
 
 
 module.exports = router;
