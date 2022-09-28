@@ -86,7 +86,6 @@ async function buildChart() {
             data: data,
             options: {
                 maintainAspectRatio: false,
-                responsive: false,
                 indexAxis: 'y',
                 plugins: {
                     legend: {
