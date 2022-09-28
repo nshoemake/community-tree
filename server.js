@@ -7,10 +7,12 @@ const MongoStore = require("connect-mongo")(session);
 const methodOverride = require("method-override");
 const flash = require("express-flash");
 const logger = require("morgan");
+const dayjs = require('dayjs')
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const postRoutes = require("./routes/posts");
 const communitiesRoutes = require("./routes/communities");
+const { formatDate } = require("./helpers/ejs");
 
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
@@ -46,6 +48,9 @@ app.use(
     store: new MongoStore({ mongooseConnection: mongoose.connection }),
   })
 );
+
+// DayJS middleware
+app.locals.formatDate = formatDate
 
 // Passport middleware
 app.use(passport.initialize());
