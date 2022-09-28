@@ -39,4 +39,5 @@ const SeedSchema = new mongoose.Schema({
   },
 });
 
+
 module.exports = mongoose.model("Seed", SeedSchema);
