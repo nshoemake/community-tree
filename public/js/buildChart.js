@@ -26,7 +26,7 @@ voteButtons.forEach(el => {
 async function buildChart() {
     try {
         const id = document.querySelector('[data-name]').dataset.name
-        const response = await fetch(`http://localhost:2121/communities/${id}/api`);
+        const response = await fetch(`/communities/${id}/api`);
         const apiData = await response.json()
 
         const ctx = document.getElementById('voteChart').getContext('2d')
