@@ -1,4 +1,4 @@
-# fly.toml file generated for community-tree on 2022-09-28T18:52:17+10:00
+# fly.toml file generated for community-tree on 2022-09-28T22:51:26+10:00
 
 app = "community-tree"
 kill_signal = "SIGINT"
