@@ -16,11 +16,13 @@ Several plugins were used: dayjs, chartjs, and pusher to name a few. I found pus
 ## Hypothetical Optimizations
 *(optional)*
 
-Accessibility is one of the building blocks of the internet today. For an application that primarily focuses on visualization of data, some real thought needs to be given on how to make that data more accessible. The first thought that comes to mind to begin to tackle this issue is the implementation of accessibility plugins (like Patternomaly, which will render data with unique patterns attached to a legend for the color blind).
+Accessibility. The concept of accessibility is one of the building blocks of the internet today. For an application that primarily focuses on visualization of data, some real thought needs to be given on how to make that data more accessible. The first thought that comes to mind to begin to tackle this issue is the implementation of accessibility plugins (like Patternomaly, which will render data with unique patterns attached to a legend for the color blind).
 
-Speed optimization deserves a special mention. This application wasn't built to be blazing fast. Implementation of progressive rendering concepts, image spriting, etc., would take this small application up a notch in terms of performance.
+Speed optimization. This deserves a special mention. This application wasn't built to be blazing fast. Implementation of progressive rendering concepts, image spriting, etc., would take this small application up a notch in terms of performance.
 
 Responsiveness. Today, a significant portion of the internet is consumed on different sized viewports. Not enough attention was given to this. For example, the use of horizontally-scrolled cards instead of a table for to display data for mobile users would improve the UX.
+
+Functionality. Let's assume there are n users on at any given time. User x is using the application. As it stands, the way the application is designed is that it will only repopulate the data visualization component when user x submits a request (via action). It will not automatically re-render our chart for user x if user y makes an update. It will only re-render new data (inclusive of n user(s') inputs) if user x completes an action that requests the re-render. This is fine for an application of this scope, but for production, you'd need to utilize a set-interval action so that any changes in data are fetched and rendered. 
 
 ## Lessons Learned:
 
@@ -28,13 +30,3 @@ MVC (OOP fundamentals, FE frameworks blur the lines between FE and BE... remix)
 JS code (OOP)
 Better planning
 
-No matter what your experience level, being an engineer means continuously learning. Every time you build something you always have those *whoa this is awesome* or *fuck yeah I did it!* moments. This is where you should share those moments! Recruiters and interviewers love to see that you're self-aware and passionate about growing.
-
-## Examples:
-Take a look at these couple examples that I have in my own portfolio:
-
-**Palettable:** https://github.com/alecortega/palettable
-
-**Twitter Battle:** https://github.com/alecortega/twitter-battle
-
-**Patch Panel:** https://github.com/alecortega/patch-panel
