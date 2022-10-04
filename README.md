@@ -13,7 +13,7 @@ This application was built with fundamentals in mind. The MVC architecture was u
 
 Several plugins were used: dayjs, chartjs, and pusher to name a few. I found pusher to be the most interesting, as applications that can benefit from its use of websockets to create a real-time flow are substantial. 
 
-## Hypothetical Optimizations
+## Optimizations
 *(optional)*
 
 Accessibility. The concept of accessibility is one of the building blocks of the internet today. For an application that primarily focuses on visualization of data, some real thought needs to be given on how to make that data more accessible. The first thought that comes to mind to begin to tackle this issue is the implementation of accessibility plugins (like Patternomaly, which will render data with unique patterns attached to a legend for the color blind).
@@ -26,7 +26,9 @@ Functionality. Let's assume there are n users on at any given time. User x is us
 
 ## Lessons Learned:
 
-MVC (OOP fundamentals, FE frameworks blur the lines between FE and BE... remix)
-JS code (OOP)
-Better planning
+Use what you need. A key lesson learned here is that there's always the right tool for the task at hand. You don't need the newest framework or dev tool that's stirring up a buzz in the industry. Build your project. When you encounter a problem that you can't solve on your own, there's a high probability someone else has already encountered that same problem and there's a tool for it. Implement and use it then. Building this way reduces bloat, works in the best interests of optimizing resources.
+
+Organization. I do see the inherent value in utilizing a front-end framework like React. In retrospect, for the UI of this project I would have most likely used React. Primarily to reduce the time-cost of building out the views.
+
+Plan better. Perhaps my greatest takeaway from this project was that the need for better planning, pre-build. It's easy to jump the gun and dive head-first into a project. But then, unfortunately, a whole lot of time is wasted.
 
