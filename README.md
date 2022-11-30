@@ -1,4 +1,4 @@
-# My Awesome Project
+# Community Tree
 Community Tree is a full-stack application with basic authentication that allows users to create accounts, unique communities, community initiatives for those communities. Users can then vote on those initiatives and see the results rendered in real-time.
 
 **Link to project:** https://community-tree.fly.dev/
@@ -14,7 +14,6 @@ This application was built with fundamentals in mind. The MVC architecture was u
 Several plugins were used: dayjs, chartjs, and pusher to name a few. I found pusher to be the most interesting, as applications that can benefit from its use of websockets to create a real-time flow are substantial. 
 
 ## Optimizations
-*(optional)*
 
 Accessibility. The concept of accessibility is one of the building blocks of the internet today. For an application that primarily focuses on visualization of data, some real thought needs to be given on how to make that data more accessible. The first thought that comes to mind to begin to tackle this issue is the implementation of accessibility plugins (like Patternomaly, which will render data with unique patterns attached to a legend for the color blind).
 
