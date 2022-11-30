@@ -3,7 +3,7 @@ Community Tree is a full-stack application with basic authentication that allows
 
 **Link to project:** https://community-tree.fly.dev/
 
-![alt tag](<img width="1090" alt="Screen Shot 2022-09-28 at 11 12 14 PM" src="https://user-images.githubusercontent.com/90182862/192789020-942398f4-da45-4c55-9e0f-ebc2c7b13781.png">)
+![alt tag](https://user-images.githubusercontent.com/90182862/192789020-942398f4-da45-4c55-9e0f-ebc2c7b13781.png)
 
 ## How It's Made:
 
